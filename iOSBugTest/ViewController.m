@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "XYTableBugViewController.h"
 @interface ViewController ()
 
 @end
@@ -16,9 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
     // Do any additional setup after loading the view, typically from a nib.
 }
-
+#pragma mark - 测试bug1
+- (IBAction)clickBug1:(UIButton *)sender {
+    XYTableBugViewController *bugVC = [[XYTableBugViewController alloc] init];
+    [self.navigationController pushViewController:bugVC animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
